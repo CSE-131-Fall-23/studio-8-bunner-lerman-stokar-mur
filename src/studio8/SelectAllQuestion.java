@@ -11,16 +11,13 @@ public class SelectAllQuestion extends MultipleChoiceQuestion {
 	}
 	
 	public int checkAnswer(String givenAnswer) {
-		int num = 0;
+		int points = super.getPoints();
 		//FIXME Should return partial credit (if earned)!
 		for(int i = 0; i < givenAnswer.length(); i++) {
-			char s = givenAnswer.charAt(i); 
-			if(this.getAnswer().indexOf(s) >= 0) {
-				num++;
+			if(givenAnswer.indexOf(i) == answer) {
+				
 			}
-	;
 		}
-		return num;
 	}
 	
 	public static void main(String[] args) {
